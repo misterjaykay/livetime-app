@@ -26,14 +26,13 @@ function setCurrentTime() {
   var threeHour = document.querySelector(".three-hour");
   var fourHour = document.querySelector(".four-hour");
   var fiveHour = document.querySelector(".five-hour");
-  var sevenHourOne = document.querySelector(".seven-first-hour");
-  var sevenHourTwo = document.querySelector(".seven-second-hour");
+  var sixHour = document.querySelector(".six-hour");
+  var sevenHour = document.querySelector(".seven-hour");
   var eightHour = document.querySelector(".eight-hour");
   var nineHour = document.querySelector(".nine-hour");
   var tenHour = document.querySelector(".ten-hour");
-
-  var mixLtrYuh = document.querySelector(".six-eight-hour");
-  var mixLtrSut = document.querySelector(".five-six-hour");
+  var elevenHour = document.querySelector(".eleven-hour");
+  var twelveHour = document.querySelector(".twelve-hour");
 
   var tenMinute = document.querySelector(".ten-minute");
   var twentyMinute = document.querySelector(".twenty-minute");
@@ -51,8 +50,10 @@ function setCurrentTime() {
   var minuteEight = document.querySelector(".minute-eight");
   var minuteNine = document.querySelector(".minute-nine");
 
-  var zeroOne = document.querySelector(".zero-first");
-  var zeroTwo = document.querySelector(".zero-second");
+  var eFn = document.querySelector(".eleven-fifteen-nineteen");
+  var twS = document.querySelector(".twleve-sixteen");
+  var thS = document.querySelector(".thirteen-seventeen");
+  var foE = document.querySelector(".fourteen-eighteen");
 
   var firstDigitHour = currentTime.charAt(0);
   var secondDigitHour = currentTime.charAt(1);
@@ -101,30 +102,24 @@ function setCurrentTime() {
       case "05":
         fourHour.removeAttribute("style");
         fiveHour.setAttribute("style", "color: #FFB9C4;");
-        mixLtrSut.setAttribute("style", "color: #FFB9C4;");
         hour.setAttribute("style", "color: #FFB9C4;");
         break;
       case "06":
         fiveHour.removeAttribute("style");
-        mixLtrYuh.setAttribute("style", "color: #FFB9C4;");
-        mixLtrSut.setAttribute("style", "color: #FFB9C4;");
+        sixHour.setAttribute("style", "color: #FFB9C4;");
         hour.setAttribute("style", "color: #FFB9C4;");
         break;
       case "07":
-        mixLtrYuh.removeAttribute("style");
-        mixLtrSut.removeAttribute("style");
-        sevenHourOne.setAttribute("style", "color: #FFB9C4;");
-        sevenHourTwo.setAttribute("style", "color: #FFB9C4;");
+        sixHour.removeAttribute("style");
+        sevenHour.setAttribute("style", "color: #FFB9C4;");
         hour.setAttribute("style", "color: #FFB9C4;");
         break;
       case "08":
         sevenHour.removeAttribute("style");
-        mixLtrYuh.setAttribute("style", "color: #FFB9C4;");
         eightHour.setAttribute("style", "color: #FFB9C4;");
         hour.setAttribute("style", "color: #FFB9C4;");
         break;
       case "09":
-        mixLtrYuh.removeAttribute("style");
         eightHour.removeAttribute("style");
         nineHour.setAttribute("style", "color: #FFB9C4;");
         hour.setAttribute("style", "color: #FFB9C4;");
@@ -135,14 +130,13 @@ function setCurrentTime() {
         hour.setAttribute("style", "color: #FFB9C4;");
         break;
       case "11":
-        tenHour.setAttribute("style", "color: #FFB9C4;");
-        oneHour.setAttribute("style", "color: #FFB9C4;");
+        tenHour.removeAttribute("style");
+        elevenHour.setAttribute("style", "color: #FFB9C4;");
         hour.setAttribute("style", "color: #FFB9C4;");
         break;
       case "12":
-        oneHour.removeAttribute("style");
-        tenHour.setAttribute("style", "color: #FFB9C4;");
-        twoHour.setAttribute("style", "color: #FFB9C4;");
+        elevenHour.removeAttribute("style");
+        twelveHour.setAttribute("style", "color: #FFB9C4;");
         hour.setAttribute("style", "color: #FFB9C4;");
         break;
     }
@@ -152,29 +146,26 @@ function setCurrentTime() {
     switch (firstDigitMinute) {
       case "0":
         fiftyMinute.removeAttribute("style");
-        tenMinute.removeAttribute("style");
         break;
       case "1":
         tenMinute.setAttribute("style", "color: #FECE76;");
         break;
       case "2":
+        tenMinute.removeAttribute("style");
+        eFn.removeAttribute("style");
         twentyMinute.setAttribute("style", "color: #FECE76;");
-        tenMinute.setAttribute("style", "color: #FECE76;");
         break;
       case "3":
         twentyMinute.removeAttribute("style");
         thiryMinute.setAttribute("style", "color: #FECE76;");
-        tenMinute.setAttribute("style", "color: #FECE76;");
         break;
       case "4":
         thiryMinute.removeAttribute("style");
         fourtyMinute.setAttribute("style", "color: #FECE76;");
-        tenMinute.setAttribute("style", "color: #FECE76;");
         break;
       case "5":
         fourtyMinute.removeAttribute("style");
         fiftyMinute.setAttribute("style", "color: #FECE76;");
-        tenMinute.setAttribute("style", "color: #FECE76;");
         break;
     }
 
@@ -184,8 +175,6 @@ function setCurrentTime() {
         minute.setAttribute("style", "color: #6caa91;");
         break;
       case "1":
-        zeroOne.removeAttribute("style");
-        zeroTwo.removeAttribute("style");
         minuteOne.setAttribute("style", "color: #6caa91;");
         minute.setAttribute("style", "color: #6caa91;");
         break;
@@ -233,9 +222,79 @@ function setCurrentTime() {
 
     if (firstDigitMinute === "0" && secondDigitMinute === "0") {
       minute.removeAttribute("style");
-      zeroOne.setAttribute("style", "color: #6caa91;");
-      zeroTwo.setAttribute("style", "color: #6caa91;");
     } 
+
+    if (firstDigitMinute === "1" && secondDigitMinute === "1") {
+      tenMinute.removeAttribute("style");
+      minuteOne.removeAttribute("style");
+      eFn.textContent = "Eleven";
+      eFn.setAttribute("style", "color: #6caa91; ");
+    }
+
+    if (firstDigitMinute === "1" && secondDigitMinute === "2") {
+      tenMinute.removeAttribute("style");
+      minuteTwo.removeAttribute("style");
+      eFn.removeAttribute("style");
+      twS.textContent = "Twelve";
+      twS.setAttribute("style", "color: #6caa91; ");
+    }
+
+    if (firstDigitMinute === "1" && secondDigitMinute === "3") {
+      tenMinute.removeAttribute("style");
+      minuteThree.removeAttribute("style");
+      twS.removeAttribute("style");
+      thS.textContent = "Thirteen";
+      thS.setAttribute("style", "color: #6caa91; ");
+    }
+
+    if (firstDigitMinute === "1" && secondDigitMinute === "4") {
+      tenMinute.removeAttribute("style");
+      minuteFour.removeAttribute("style");
+      eFn.removeAttribute("style");
+      thS.textContent = "Fourteen";
+      foE.setAttribute("style", "color: #6caa91; ");
+    }
+
+    if (firstDigitMinute === "1" && secondDigitMinute === "5") {
+      tenMinute.removeAttribute("style");
+      minuteFive.removeAttribute("style");
+      foE.removeAttribute("style");
+      eFn.textContent = "Fifteen";
+      eFn.setAttribute("style", "color: #6caa91; ");
+    }
+
+    if (firstDigitMinute === "1" && secondDigitMinute === "6") {
+      tenMinute.removeAttribute("style");
+      minuteSix.removeAttribute("style");
+      eFn.removeAttribute("style");
+      twS.textContent = "Sixteen";
+      twS.setAttribute("style", "color: #6caa91; ");
+    }
+
+    if (firstDigitMinute === "1" && secondDigitMinute === "7") {
+      tenMinute.removeAttribute("style");
+      minuteSeven.removeAttribute("style");
+      twS.removeAttribute("style");
+      thS.textContent = "Seventeen";
+      thS.setAttribute("style", "color: #6caa91; ");
+    }
+
+    if (firstDigitMinute === "1" && secondDigitMinute === "8") {
+      tenMinute.removeAttribute("style");
+      minuteEight.removeAttribute("style");
+      thS.removeAttribute("style");
+      foE.textContent = "Eighteen";
+      foE.setAttribute("style", "color: #6caa91; ");
+    }
+
+    if (firstDigitMinute === "1" && secondDigitMinute === "9") {
+      tenMinute.removeAttribute("style");
+      minuteNine.removeAttribute("style");
+      foE.removeAttribute("style");
+      eFn.textContent = "Nineteen";
+      eFn.setAttribute("style", "color: #6caa91; ");
+    }
+
   }
 }
 

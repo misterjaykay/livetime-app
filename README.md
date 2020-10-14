@@ -7,7 +7,12 @@ Simple clock app to show current time using korean letters.
 https://misterjaykay.github.io/livetime-app/
 
 ## Screenshot:
-![Screenshot1](assets/screenshotclock.png)
+
+### Korean version
+![Screenshot1](assets/screenshot-kr.png)
+
+### English Version
+![Screenshot2](assets/screenshot-en.png)
 
 ## Contribute:
 Please fork this repo.
