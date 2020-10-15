@@ -29,7 +29,8 @@ function setCurrentTime() {
   var sevenHourOne = document.querySelector(".seven-first-hour");
   var sevenHourTwo = document.querySelector(".seven-second-hour");
   var eightHour = document.querySelector(".eight-hour");
-  var nineHour = document.querySelector(".nine-hour");
+  var nineHourOne = document.querySelector(".nine-first-hour");
+  var nineHourTwo = document.querySelector(".nine-second-hour");
   var tenHour = document.querySelector(".ten-hour");
 
   var mixLtrYuh = document.querySelector(".six-eight-hour");
@@ -54,6 +55,9 @@ function setCurrentTime() {
   var zeroOne = document.querySelector(".zero-first");
   var zeroTwo = document.querySelector(".zero-second");
 
+  var seconds = document.querySelector(".seconds");
+  var secondStamp = document.querySelector(".second-stamp");
+
   var firstDigitHour = currentTime.charAt(0);
   var secondDigitHour = currentTime.charAt(1);
   var currentHour = firstDigitHour + secondDigitHour;
@@ -62,10 +66,15 @@ function setCurrentTime() {
   var secondDigitMinute = currentTime.charAt(4);
   var currentMinute = firstDigitMinute + secondDigitMinute;
 
+  var firstDigitSecond = currentTime.charAt(6);
+  var secondDigitSecond = currentTime.charAt(7);
+  var currentSecond = firstDigitSecond + secondDigitSecond;
+
   // timeDOM.textContent = currentTime;
   dayColor();
   hourColor();
   minuteColor();
+  secondColor();
 
   function dayColor() {
     if (currentTime.charAt(9) === "p") {
@@ -118,7 +127,8 @@ function setCurrentTime() {
         hour.setAttribute("style", "color: #FFB9C4;");
         break;
       case "08":
-        sevenHour.removeAttribute("style");
+        sevenHourOne.removeAttribute("style");
+        sevenHourTwo.removeAttribute("style");
         mixLtrYuh.setAttribute("style", "color: #FFB9C4;");
         eightHour.setAttribute("style", "color: #FFB9C4;");
         hour.setAttribute("style", "color: #FFB9C4;");
@@ -126,11 +136,13 @@ function setCurrentTime() {
       case "09":
         mixLtrYuh.removeAttribute("style");
         eightHour.removeAttribute("style");
-        nineHour.setAttribute("style", "color: #FFB9C4;");
+        nineHourOne.setAttribute("style", "color: #FFB9C4;");
+        nineHourTwo.setAttribute("style", "color: #FFB9C4;");
         hour.setAttribute("style", "color: #FFB9C4;");
         break;
       case "10":
-        nineHour.removeAttribute("style");
+        nineHourOne.removeAttribute("style");
+        nineHourTwo.removeAttribute("style");
         tenHour.setAttribute("style", "color: #FFB9C4;");
         hour.setAttribute("style", "color: #FFB9C4;");
         break;
@@ -236,6 +248,12 @@ function setCurrentTime() {
       zeroOne.setAttribute("style", "color: #6caa91;");
       zeroTwo.setAttribute("style", "color: #6caa91;");
     } 
+  }
+
+  function secondColor() {
+    seconds.textContent = currentSecond;
+    seconds.setAttribute("style", "color: #96B9D0;");
+    secondStamp.setAttribute("style", "color: #96B9D0;")
   }
 }
 
