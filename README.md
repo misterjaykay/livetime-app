@@ -9,10 +9,10 @@ https://misterjaykay.github.io/livetime-app/
 ## Screenshot:
 
 ### Korean version
-![Screenshot1](assets/screenshot-kr.png)
+![Screenshot1](assets/screenshots/screenshot-kr.png)
 
 ### English Version
-![Screenshot2](assets/screenshot-en.png)
+![Screenshot2](assets/screenshots/screenshot-en.png)
 
 ## Contribute:
 Please fork this repo.
