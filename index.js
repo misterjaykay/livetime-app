@@ -81,6 +81,8 @@ function setCurrentTime() {
       night.setAttribute("style", "color: #B29DD9;");
     } else {
       day.setAttribute("style", "color: #FDFD98;");
+      // document.body.style.background = "#808080";
+      // document.body.style.color = "#8c8c8c";
     }
   }
 
